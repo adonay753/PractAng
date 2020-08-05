@@ -2,13 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { DestinoViajeComponent } from './destino-viaje/destino-viaje.component';
+import { DestinoViajesComponent } from './destino-viajes/destino-viajes.component';
+import {ListaDestinosComponent} from './lista-destinos/lista-destinos.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    DestinoViajeComponent
-  ],
+    declarations: [
+        AppComponent,
+        DestinoViajesComponent,
+        ListaDestinosComponent
+    ],
   imports: [
     BrowserModule
   ],
