@@ -8,7 +8,7 @@ import {DestinoViaje} from '../models/destino-viaje.model';
 })
 export class DestinoViajesComponent implements OnInit {
   @Input() destino: DestinoViaje;
-  @HostBinding('attr.class') cssClass = 'class="col-md-4"';
+  @HostBinding('attr.class') cssClass = 'col-md-4';
   constructor() {}
 
   ngOnInit(): void {
