@@ -3,7 +3,7 @@ import {DestinoViaje} from '../models/destino-viaje.model';
 
 @Component({
   selector: 'app-lista-destinos',
-  templateUrl: './lista-destinos.component.html',
+  templateUrl:  './lista-destinos.component.html',
   styleUrls: ['./lista-destinos.component.css']
 })
 export class ListaDestinosComponent implements OnInit {
@@ -16,15 +16,15 @@ export class ListaDestinosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  guardar(nombre: string, url: string): boolean {
-    this.destinos.push(new DestinoViaje(nombre, url));
-    return false;
+  agregado(d: DestinoViaje): boolean {
+    this.destinos.add(d);
+    this.onItemAdded.emit(d);
   }
 
-  elegido(d: DestinoViaje) {
+  elegido(e: DestinoViaje) {
     // tslint:disable-next-line:only-arrow-functions
     this.destinos.forEach(function(x) {x.setSelected(false); });
-    d.setSelected(true);
+    e.setSelected(true);
   }
 }
 
